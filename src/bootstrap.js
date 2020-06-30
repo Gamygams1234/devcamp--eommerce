@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { createStore, applyMiddleware } from "redux";
+import { createStore, applyMiddleware, compose } from "redux";
 import { Router, Switch, Route } from "react-router-dom";
 import Layout from "./components/layout";
 import reducers from "./reducers";
 import SignIn from "./components/auth/SignIn";
 import SignUp from "./components/auth/SignUp";
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+const createStoreWithMiddleware = applyMiddleware()(compose((window.devToolsExtension ? window.devToolsExtension() : (f) => f)(createStore)));
 
 import "./style/main.scss";
 
@@ -22,6 +22,7 @@ function main() {
           <Switch>
             <Route path="/" exact component={SignIn} />
             <Route path="/signup" exact component={SignUp} />
+            <Route path="/signin" exact component={SignIn} />
           </Switch>
         </Layout>
       </Router>
