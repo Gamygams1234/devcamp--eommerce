@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Navbar from "./headernav/navbar";
-import Header from "./headernav/header";
+import Navbar from "./headernavbar/navbar";
+import Header from "./headernavbar/header";
 
 class Layout extends Component {
   render() {
