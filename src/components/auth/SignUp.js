@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import * as actions from "../../actions";
 
 class SignUp extends Component {
+  // taking out links when we log out
   componentDidMount() {
     this.props.setHeaderLinks([]);
     this.props.setNavbarLinks([]);
