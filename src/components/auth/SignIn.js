@@ -1,12 +1,22 @@
 import React, { Component } from "react";
-import SignInForm from "./SignInForm";
 
-import PageTitle from "../PageTitle";
+import SignInForm from "./signinForm";
+import PageTitle from "../pageTitle";
+
+import { connect } from "react-redux";
+import * as actions from "../../actions";
+
 class SignIn extends Component {
-  // this will handle our submission and we do not have to pass e.prevent Default
+  // taking out links when we log out
+  componentDidMount() {
+    this.props.setHeaderLinks([]);
+    this.props.setNavbarLinks([]);
+  }
+
   onSubmit = (fields) => {
     console.log(fields);
   };
+
   render() {
     return (
       <div className="sign-in">
@@ -16,5 +26,7 @@ class SignIn extends Component {
     );
   }
 }
+
+SignIn = connect(null, actions)(SignIn);
 
 export default SignIn;
