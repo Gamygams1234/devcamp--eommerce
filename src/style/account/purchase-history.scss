@@ -87,3 +87,26 @@
     font-size: 14px;
   }
 }
+.purchase-detail-label {
+  display: grid;
+  grid-template-rows: [s] 1fr [e];
+  grid-template-columns: [s] 1fr [m] 1fr [e];
+  grid-gap: 10px;
+
+  & > * {
+    grid-row: s/e;
+  }
+
+  &__title {
+    grid-column: s/m;
+    text-align: right;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  &__value {
+    grid-column: m/e;
+    text-align: left;
+    color: #666666;
+    font-size: 14px;
+  }
+}
