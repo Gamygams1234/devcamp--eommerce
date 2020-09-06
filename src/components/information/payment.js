@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 
 import PageTitle from "../pageTitle";
-import React, { Component } from "react";
-
-import PageTitle from "../pageTitle";
 
 // REDUX
 

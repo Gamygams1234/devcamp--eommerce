@@ -2,10 +2,9 @@ import React, { Component } from "react";
 
 import { reduxForm, Field } from "redux-form";
 
-import { FormInput, FormButton } from "../formFields";
+import { FormInput, FormButton } from "../FormFields";
 
 import history from "../../history";
-
 class PaymentForm extends Component {
   render() {
     const { className, handleSubmit } = this.props;
